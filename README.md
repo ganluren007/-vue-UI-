@@ -4,7 +4,7 @@
 
 一 组件介绍
 1  Minput
-   props
+    props
        name              type                 描述
      1 validate          正则表达式                        该input需要验证的正则表达式，传入后
      2 isCheck           Number               声明了该变量后，当需要验证该input的数据时，对应该数字加一处理
@@ -19,7 +19,7 @@
 
 
 2  Mstar  评分组件
-   props
+    props
        name              type                 描述
      1 imgUrl            数组                        	  【好评图片url，差评图片url】
      2 activeNum         Number               初始化好评分数
