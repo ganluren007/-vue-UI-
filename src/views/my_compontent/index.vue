@@ -1,10 +1,14 @@
 <template>
 	<div>
 		<ul>
-			<li><router-link :to='{path:"/Minput"}'>Minput</router-link></li>
-			<li><router-link :to='{path:"/Mstar"}'>Mstar</router-link></li>
-			<li><router-link :to='{path:"/Mhover"}'>Mhover(pc端)</router-link></li>
-			<li><router-link :to='{path:"/Mscroll"}'>Mscroll</router-link></li>
+			<li><router-link :to='{path:"/Minput"}'>Minput（input组件）</router-link></li>
+			<li><router-link :to='{path:"/Mstar"}'>Mstar（评分组件）</router-link></li>
+			<li><router-link :to='{path:"/Mhover"}'>Mhover(pc端  )</router-link></li>
+			<li><router-link :to='{path:"/Mscroll"}'>Mscroll（滚动组件）</router-link></li>
+			<li><router-link :to='{path:"/Mdrag"}'>Mdrag(拖拽  自定义指令)</router-link></li>
+			<li><router-link :to='{path:"/McheckorradioDemo"}'>单多选</router-link></li>
+			<li><router-link :to='{path:"/MprogressDemo"}'>可拖拽进度条</router-link></li>
+			
 		</ul>
 		
 		

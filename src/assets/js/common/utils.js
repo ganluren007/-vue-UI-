@@ -5,7 +5,7 @@
  * @Last Modified time: 2017-06-29 15:28:35
  */
 
-+function() {
++ function() {
 	var utils = {};
 
 	/**
@@ -72,7 +72,7 @@
 				"terminalType": "AJS_mobile"
 			}, opt.data);
 			var headers = $.extend(true, {
-				"terminalType": "AJS_mobile"				
+				"terminalType": "AJS_mobile"
 			}, opt.headers);
 		}
 		$.ajax({
@@ -151,26 +151,26 @@
 	}
 
 	utils.tianyan = function(ele, appsId) {
-			console.log("tianyan");
-			var eveId = ele.attr("data-eveId");
-			var label = ele.attr("data-label");
-			
-//			console.log(SKAPP)
-			//				if(!tag) return;
-			if(typeof SKAPP != "undefined") {
-				SKAPP.onEvent(eveId, label, {
-					"DeviceId": utils.phoneType(),
-					"appsId": appsId
-				});
-			}
+		console.log("tianyan");
+		var eveId = ele.attr("data-eveId");
+		var label = ele.attr("data-label");
 
+		//			console.log(SKAPP)
+		//				if(!tag) return;
+		if(typeof SKAPP != "undefined") {
+			SKAPP.onEvent(eveId, label, {
+				"DeviceId": utils.phoneType(),
+				"appsId": appsId
+			});
 		}
-		utils.go_zj = function(router, zj_name, params) {
-			router.push({
-				"name": zj_name,
-				"params": params
-			})
-		}
+
+	}
+	utils.go_zj = function(router, zj_name, params) {
+		router.push({
+			"name": zj_name,
+			"params": params
+		})
+	}
 
 	utils.radom_num = function(Min, Max) {
 		var Range = Max - Min;
@@ -200,30 +200,46 @@
 			}
 		}
 	}
-    
-   
+
 	//  token的开关
 	utils.token_kg = false;
-    
-    
-    utils.btn_sl=function(){
-    	
-		var btn=$(".btn_sl")
+
+	utils.btn_sl = function() {
+
+		var btn = $(".btn_sl")
 		console.log($(".btn_sl"))
-		$(".btn_sl").click(function(){
-			var width=$(this).width();
-			var height=$(this).height();			
+		$(".btn_sl").click(function() {
+			var width = $(this).width();
+			var height = $(this).height();
 			$(this).append("<div class='btn_yy'></div>")
-			var chi=$(this).children(".btn_yy");
-			chi.css({"width":width,"height":height});
-			var timer=setTimeout(function(){
+			var chi = $(this).children(".btn_yy");
+			chi.css({
+				"width": width,
+				"height": height
+			});
+			var timer = setTimeout(function() {
 				chi.remove()
-			},200)	
+			}, 200)
 		})
+	}
+
+
+	utils.getPoint=function(obj) { //获取某元素以浏览器左上角为原点的坐标  
+		var t = obj.offsetTop; //获取该元素对应父容器的上边距  
+		var l = obj.offsetLeft; //对应父容器的上边距  
+		//判断是否有父容器，如果存在则累加其边距  
+		while(obj = obj.offsetParent) { //等效 obj = obj.offsetParent;while (obj != undefined)  
+			t += obj.offsetTop; //叠加父容器的上边距  
+			l += obj.offsetLeft; //叠加父容器的左边距  
+		}
+		return {
+			"top":t,"left":l
+		}
 		
-		
-		
-			    }
+	}
+	
+	
+	
 	window.utils = utils;
 
 	//页面访问地址-公共路径

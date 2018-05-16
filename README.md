@@ -1,6 +1,6 @@
-安装依赖：npm install
-启动项目：npm run dev
-打开项目：http://localhost:8080/dist/my_compontent.html
+#安装依赖：npm install
+#启动项目：npm run dev
+#打开项目：http://localhost:8080/dist/my_compontent.html
 
 一 组件介绍
 1  Minput

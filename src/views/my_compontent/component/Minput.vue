@@ -68,7 +68,7 @@
 				this.$emit("on-blur",event,this.currentVal)
 			},
 			input(event){
-				this.$emit("on-change",event,this.currentVal)
+				this.$emit("on-input",event,this.currentVal)
 			},
 			change(event){
 				this.$emit("on-change",event,this.currentVal)
